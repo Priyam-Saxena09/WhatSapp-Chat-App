@@ -5,11 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev":"env-cmd dev.env nodemon app.js"
+    "dev": "env-cmd dev.env nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bad-words": "^3.0.3",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },

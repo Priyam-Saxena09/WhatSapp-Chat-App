@@ -15,7 +15,7 @@ button.addEventListener("click",() => {
         socket.emit("messtoall",input,(error) => {
                if(error)
                {
-                  alert("Unable to Send your message");
+                  alert(error);
                }
                else
                {

@@ -3,6 +3,7 @@ const http = require("http")
 const socketio = require("socket.io")
 const port = process.env.PORT;
 const { adduser,getUsersinoneroom,removeuser,finduser } = require("./userlist")
+const bad = require("bad-words")
 const app = express()
 app.use(express.static("public"))
 const server = http.createServer(app)
@@ -28,9 +29,14 @@ io.on("connection",(socket) => {
 
     socket.on("messtoall",(mess,cb) => {
         const user = finduser(socket.id)
+        const filter = new bad()
+        if(filter.isProfane(mess))
+        {
+            return cb("Sorry!Foul Messages Not Allowed")
+        }
         if(!mess || !user)
         {
-            return cb("Empty message")
+            return cb("Unable to Send the Message")
         }
         io.emit("mess",{message:mess,name:user.name})
         cb(undefined)

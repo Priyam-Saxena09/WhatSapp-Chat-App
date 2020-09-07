@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+body
+{
+    background: black;
+}
+form
+{
+    display: grid;
+    grid-template-rows: repeat(2,130%);
+    grid-template-columns: repeat(2,8%);
+    margin-left:35%;
+    margin-top: 4%;
+}
+input
+
+{
+    width:410%;
+    height:26px;
+}
+h1
+{
+    font-family: 'Jacques Francois Shadow', cursive;
+    font-size:310%;
+    margin-left:40%;
+    margin-top: 11%;
+    color: white;
+}
+b
+{
+    font-family: 'Delius Swash Caps';
+    font-size: 109%;
+    color: white;
+}
+button
+{
+    background-color: darkgreen;
+    width:120px;
+    height:30px;
+    margin-left:211%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Whatsapp Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/download.jpg">
+</head>
+<body>
+    <div class="head">
+        <img src = "Images/png-clipart-viber-logo-whatsapp-computer-icons-instant-messaging-mobile-phones-icon-whatsapp-symbol-text-logo-thumbnail.jpg">
+        <h1>Whatsapp Chat App</h1>
+    </div>
+    <div class="box">
+        <div class="users">
+            <h2>Members in room</h2>
+            <hr width="99%"/>
+        </div>
+        <div class="mess">
+        </div>
+    </div>
+    <div class="input">
+    <input type="text" id="message" name="message" placeholder="Enter the Message">
+    <button>Send</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
